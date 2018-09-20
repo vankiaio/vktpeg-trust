@@ -1,0 +1,93 @@
+{
+  "version": "eosio::abi/1.0",
+  "types": [{
+        "new_type_name": "account_name",
+      "type": "name"
+      }
+  ],
+  "structs": [{
+      "name": "dummyinfo",
+      "base": "",
+      "fields": [
+        {"name": "id","type": "uint64"},
+        {"name": "to","type": "account_name"},
+        {"name": "quantity","type": "asset"}
+      ]
+    },{
+      "name": "actioninfo",
+      "base": "",
+      "fields": [
+        {"name": "id","type": "uint64"},
+        {"name": "receiver","type": "account_name"},
+        {"name": "code","type": "account_name"},
+        {"name": "action","type": "account_name"}
+      ]
+    },{
+      "name": "transferinfo",
+      "base": "",
+      "fields": [
+        {"name": "id","type": "uint64"},
+        {"name": "from","type": "account_name"},
+        {"name": "to","type": "account_name"},
+        {"name": "quantity","type": "asset"},
+        {"name": "memo","type": "string"}
+      ]
+    },{
+      "name": "dummyaction",
+      "base": "",
+      "fields": [
+        {"name": "to","type": "account_name"},
+        {"name": "quantity","type": "asset"}
+      ]
+    },{
+      "name": "reset",
+      "base": "",
+      "fields": [
+      ]
+    }
+  ],
+  "actions": [{
+      "name": "transfer",
+      "type": "dummyaction",
+      "ricardian_contract": ""
+    },{
+      "name": "reset",
+      "type": "reset",
+      "ricardian_contract": ""
+    }
+  ],
+  "tables": [{
+      "name": "dummyinfo",
+      "index_type": "i64",
+      "key_names": [
+        "id"
+      ],
+      "key_types": [
+        "uint64"
+      ],
+      "type": "dummyinfo"
+    },{
+      "name": "actioninfo",
+      "index_type": "i64",
+      "key_names": [
+        "id"
+      ],
+      "key_types": [
+        "uint64"
+      ],
+      "type": "actioninfo"
+    },{
+      "name": "transferinfo",
+      "index_type": "i64",
+      "key_names": [
+        "id"
+      ],
+      "key_types": [
+        "uint64"
+      ],
+      "type": "transferinfo"
+    }
+  ],
+  "ricardian_clauses": [
+  ]
+}
