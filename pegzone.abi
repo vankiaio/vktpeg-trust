@@ -54,11 +54,11 @@
       "name": "sidetranargs",
       "base": "",
       "fields": [
-      	{"name": "from","type": "string"},
-        {"name": "to","type": "account_name"},
-        {"name": "quantity","type": "asset"},
-        {"name": "memo","type": "string"},
-        {"name": "index","type": "uint64"}
+      	{"name": "From","type": "string"},
+        {"name": "To","type": "account_name"},
+        {"name": "Quantity","type": "asset"},
+        {"name": "Memo","type": "string"},
+        {"name": "Index","type": "uint64"}
       ]
     },{
       "name": "reset",

@@ -34,11 +34,11 @@ extern "C" {
 
 
 	struct sidetranargs {
-		std::string      from;
-		account_name     to;
-		eosio::asset     quantity;
-		std::string      memo;
-		uint64_t         index;
+		std::string      From;
+		account_name     To;
+		eosio::asset     Quantity;
+		std::string      Memo;
+		uint64_t         Index;
 	};
 
 	struct sidetransfer {
@@ -100,11 +100,11 @@ extern "C" {
 		 sidetransfer_index sidetransfers(_self, _self);
 		 auto new_sidetransfer_itr = sidetransfers.emplace(_self, [&](auto& info){
 			info.id         = sidetransfers.available_primary_key();
-			info.from       = args.from;
-			info.to         = args.to;
-			info.quantity   = args.quantity;
-			info.memo       = args.memo;
-			info.index      = args.index;
+			info.from       = args.From;
+			info.to         = args.To;
+			info.quantity   = args.Quantity;
+			info.memo       = args.Memo;
+			info.index      = args.Index;
 		 });
 
 		 sidereqcount_index sidereqcount(_self, _self);
